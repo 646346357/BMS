@@ -1,0 +1,65 @@
+//
+//  JXTPrefixHeader.pch
+//  SplendidGarden
+//
+//  Created by admin on 2017/9/25.
+//  Copyright © 2017年 admin. All rights reserved.
+//
+
+#ifndef JXTPrefixHeader_pch
+#define JXTPrefixHeader_pch
+#define MAS_SHORTHAND_GLOBALS
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - ThirdLib
+#import "BMS-Bridging-Header.h"
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+#import "CocoaLumberjack.h"
+#import "BabyBluetooth.h"
+#import "SVProgressHUD.h"
+
+#pragma mark - Catagory
+
+#import "UIView+JXTCategory.h"
+#import "UIColor+JXTCategory.h"
+#import "NSAttributedString+JXTCategory.h"
+#import "UIButton+JXTCategory.h"
+#import "UILabel+JXTCategory.h"
+#import "UIImage+JXTCategory.h"
+#import "NSString+JXTCategory.h"
+#import "UIViewController+JXTCategory.h"
+#import "NSDate+JXTCategory.h"
+#import "NSDictionary+JXTCategory.h"
+#import "WKWebView+JXTCategory.h"
+#import "UIImageView+JXTCategory.h"
+#import "UITableView+JXTCategory.h"
+#import "UIApplication+JXTCategory.h"
+#import "UIResponder+JXTCatagory.h"
+#import "UIViewController+KeyboardAnimation.h"
+#import "UIFont+JXTCatagory.h"
+
+#pragma mark - Model(Manager)
+#import "JXTCharacterManager.h"
+#import "JXTBatteryInfoManager.h"
+#import "JXTLogManager.h"
+
+#pragma mark - Utilities
+#import "UITextField+Shake.h"
+#import "JXTGlobalMacro.h"
+#import "JXTAppInfo.h"
+#import "JXTBluetooth.h"
+#import "JXTDocumentManager.h"
+
+#pragma mark - Custom UI
+
+#import "JXTNavigationController.h"
+#import "JXTAlertViewController.h"
+#import "JXTButton.h"
+
+#ifdef DEBUG
+#define NULLSAFE_ENABLED 0
+#endif
+
+#endif /* JXTPrefixHeader_pch */
