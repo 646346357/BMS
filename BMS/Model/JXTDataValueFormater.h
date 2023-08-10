@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JXTDataValueFormater : NSObject<IChartValueFormatter>
+@interface JXTDataValueFormater : NSObject<ChartValueFormatter>
 
 - (instancetype)initWithArray:(NSMutableArray *)arr;
 

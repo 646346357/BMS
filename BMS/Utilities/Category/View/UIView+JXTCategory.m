@@ -195,16 +195,16 @@ static UIView *lastViewWithHUD = nil;
     
     hud.userInteractionEnabled = YES;
     if (tip!=nil) {
-        hud.labelText = tip;
+        hud.label.text = tip;
     } else {
-        hud.labelText = @"正在加载...";
+        hud.label.text = @"正在加载...";
     }
 }
 
 + (void)updateActivityIndicatorViewWithString:(NSString *)tip {
     MBProgressHUD *hud = [MBProgressHUD HUDForView:lastViewWithHUD];
     if (hud) {
-        hud.labelText = tip;
+        hud.label.text = tip;
     }
 }
 
@@ -218,20 +218,22 @@ static UIView *lastViewWithHUD = nil;
         for(NSObject* obj in [UIApplication sharedApplication].keyWindow.subviews){
             if([obj isKindOfClass:[MBProgressHUD class]]){
                 MBProgressHUD* shud = (MBProgressHUD*)obj;
-                if(![shud.detailsLabelText isEqualToString:string]){
-                    hud.yOffset = shud.yOffset+20;
+                if(![shud.detailsLabel.text isEqualToString:string]){
+                    CGPoint offset = hud.offset;
+                    offset.y = shud.offset.y+20;
+                    hud.offset = offset;
                 }
             }
         }
         hud.userInteractionEnabled = NO;
         hud.mode = MBProgressHUDModeText;
-        hud.detailsLabelText = string;
+        hud.detailsLabel.text = string;
         hud.margin = 10.f;
-        hud.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:.65];
-        hud.detailsLabelColor = [UIColor whiteColor];
+//        hud.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:.65];
+        hud.detailsLabel.textColor = [UIColor whiteColor];
         hud.removeFromSuperViewOnHide = YES;
-        hud.cornerRadius = 5.0;
-        [hud hide:YES afterDelay:stayDuration+0.5];
+//        hud.cornerRadius = 5.0;
+        [hud hideAnimated:YES afterDelay:stayDuration+0.5];
     }
     /*[[UIApplication sharedApplication].keyWindow showHudString:string stayDuration:stayDuration animationDuration:animationDuration hudDidHide:block];*/
 }

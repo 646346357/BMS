@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     self.peripheralDataArray = [[NSMutableArray alloc]init];
     if ([JXTBluetooth sharedInstance].currentPeripheral) {
         [self.peripheralDataArray addObject:[JXTBluetooth sharedInstance].currentPeripheral];

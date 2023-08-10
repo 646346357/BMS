@@ -253,6 +253,8 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>蚂蚁BMS需要打开蓝牙连接BMS</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>蚂蚁BMS需要打开蓝牙连接BMS</string>
 	<key>UIBackgroundModes</key>

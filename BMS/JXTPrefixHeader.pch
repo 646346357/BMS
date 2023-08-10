@@ -14,11 +14,26 @@
 
 #pragma mark - ThirdLib
 #import "BMS-Bridging-Header.h"
-#import "Masonry.h"
-#import "MBProgressHUD.h"
-#import "CocoaLumberjack.h"
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+#import <SVProgressHUD.h>
 #import "BabyBluetooth.h"
-#import "SVProgressHUD.h"
+
+#ifdef __OBJC__
+#import <CocoaLumberjack.h>
+#ifdef DEBUG
+    static const int ddLogLevel = DDLogLevelDebug;
+#else
+    static const int ddLogLevel = DDLogLevelInfo;
+#endif
+#endif
+
+#pragma mark - Utilities
+#import "UITextField+Shake.h"
+#import "JXTGlobalMacro.h"
+#import "JXTAppInfo.h"
+#import "JXTBluetooth.h"
+#import "JXTDocumentManager.h"
 
 #pragma mark - Catagory
 
@@ -45,12 +60,7 @@
 #import "JXTBatteryInfoManager.h"
 #import "JXTLogManager.h"
 
-#pragma mark - Utilities
-#import "UITextField+Shake.h"
-#import "JXTGlobalMacro.h"
-#import "JXTAppInfo.h"
-#import "JXTBluetooth.h"
-#import "JXTDocumentManager.h"
+
 
 #pragma mark - Custom UI
 

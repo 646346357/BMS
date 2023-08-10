@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JXTXValueFormater : NSObject<IChartAxisValueFormatter>
+@interface JXTXValueFormater : NSObject<ChartAxisValueFormatter>
 
 @end
 

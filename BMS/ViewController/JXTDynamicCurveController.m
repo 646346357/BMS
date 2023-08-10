@@ -57,7 +57,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigationBar];
     [self setupSubviews];
     [self setupLineViewDataSet];

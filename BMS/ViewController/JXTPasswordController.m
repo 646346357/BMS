@@ -28,7 +28,6 @@ static const NSTimeInterval kupdateTimeout = 60;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigationBar];
     [self setupSubViews];
     [self addNotification];

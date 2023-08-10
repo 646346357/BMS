@@ -24,6 +24,7 @@
     self.window = window;
     //避免多个button同时响应
     [[UIButton appearance] setExclusiveTouch:YES];
+    [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     
     //日志初始化
     [JXTDocumentManager sharedInstance];
@@ -44,7 +45,6 @@
     
     JXTNavigationController *nav = [[JXTNavigationController alloc] initWithRootViewController:[[JXTConnectController alloc] init]];
     [window setRootViewController:nav];
-    [NSThread sleepForTimeInterval:1];
     
     return YES;
 }

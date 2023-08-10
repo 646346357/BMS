@@ -1,0 +1,40 @@
+PODS:
+  - CocoaLumberjack (3.8.0):
+    - CocoaLumberjack/Core (= 3.8.0)
+  - CocoaLumberjack/Core (3.8.0)
+  - DGCharts (5.0.0):
+    - DGCharts/Core (= 5.0.0)
+  - DGCharts/Core (5.0.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - DGCharts
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD
+  - MJRefresh
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CocoaLumberjack
+    - DGCharts
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 78abfb691154e2a9df8ded4350d504ee19d90732
+  DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 100b31c9defaa01d9dd3b43a4dec9f192bc1fa99
+
+COCOAPODS: 1.11.3

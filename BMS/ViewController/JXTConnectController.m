@@ -34,6 +34,9 @@ static const NSTimeInterval kCountDown = 60;
     [JXTBluetooth sharedInstance];
     self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:kCountDown target:self selector:@selector(timeout:) userInfo:nil repeats:NO];
     [self addAniamation];
+    
+    //test
+    [self skipBtnDidClicked:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

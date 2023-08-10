@@ -24,6 +24,16 @@
         UIImage *image = [UIImage imageWithColor:[UIColor defaultItemColor]];
         [self.navigationBar setBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch] forBarMetrics:UIBarMetricsDefault];
         [self.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor lineColor]]];
+        
+        if (@available(iOS 15.0, *)) {
+            UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+            appearance.titleTextAttributes = self.navigationBar.titleTextAttributes;
+            [appearance setBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch]];
+            [appearance setShadowImage:[UIImage imageWithColor:[UIColor lineColor]]];
+            appearance.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+            self.navigationBar.standardAppearance = appearance;
+            self.navigationBar.scrollEdgeAppearance = appearance;
+        }
     }
 
     return self;

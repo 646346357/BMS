@@ -1,0 +1,6 @@
+framework module Pods_BMS {
+  umbrella header "Pods-BMS-umbrella.h"
+
+  export *
+  module * { export * }
+}
